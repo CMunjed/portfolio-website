@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>C Munjed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/menu.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/close.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar" id="myNavbar">
+      <div class="logo">
+        <a href="#">C Munjed</a>
+      </div>
+      <ul class="links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+      <div class="toggle_button">
+        <i class="gg-menu"></i>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </div>
+      <script>
+        const toggleButton = document.querySelector(".toggle_button");
+        const toggleButtonIcon = document.querySelector(".toggle_button i");
+        const dropdownMenu = document.querySelector(".dropdown_menu");
+
+        toggleButton.onclick = function () {
+          console.log("button pressed");
+          dropdownMenu.classList.toggle("open");
+          const isOpen = dropdownMenu.classList.contains("open");
+
+          toggleButtonIcon.classList = isOpen ? "gg-close" : "gg-menu";
+        };
+      </script>
+    </nav>
+    <!--<ul>
+      <li>Collapse Button</li>
+      <li>LOGO</li>
+      <li>About</li>
+      <li>Skills</li>
+      <li>Projects</li>
+      <li>Contact Me</li>
+      <li>Redirect Icons (Github, etc.)</li>
+    </ul>-->
+    <header>
+      <h1>C Munjed</h1>
+      <h2>> Software Developer<span class="blink">_</span></h2>
+      <h2>↓</h2>
+      <!--Re-style this arrow, this will bring you to the about section-->
+    </header>
+    <main>
+      <section></section>
+      <section></section>
+      <section></section>
+    </main>
+  </body>
+</html>
