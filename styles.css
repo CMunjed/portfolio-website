@@ -76,21 +76,50 @@ li {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
+    transition: all .1s ease-in-out;
 }
 
 .navbar a:hover {
     color: #c6c6c6;
-    transform: scale(1.1);
+    /*transform: scale(1.1);*/
+    /*font-size: 1.6rem;*/
 }
 
 .navbar .logo a {
+    display: flex;
     font-size: 2rem;
     font-weight: 500;
+    padding-top: 8px;
 }
 
 .navbar .links {
     display: flex;
     gap: 2rem;
+    padding-top: 20px;
+}
+
+.navbar li button {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #babfc3;
+    padding: 7px 16px;
+    min-height: 36px;
+    min-width: 36px;
+    color: #ffffff;
+    background: #24252f; 
+    border-radius:4px; 
+    font-weight: 500; 
+    font-size: 1.5rem; 
+    margin-top: -0.38rem;
+    /*box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px;*/
+    /*:hover {  }*/
+}
+
+.navbar li button:hover {
+    /*background: #21202b; outline: 1px solid transparent;*/
+    color: #c6c6c6;
 }
 
 .navbar .toggle_button {
@@ -172,7 +201,7 @@ header .icons a:hover {
 }*/
 
 header .down {
-    padding-top: 4rem;
+    padding-top: 5rem;
 }
 
 header .down a {
@@ -205,7 +234,7 @@ header .down a:hover {
         font-size: 15vh;
     }
     header h2 {
-        font-size: 8vh;
+        font-size: 6vh;
     }
     header .down a {
         scale: 1.25;
