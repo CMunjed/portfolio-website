@@ -80,6 +80,7 @@ li {
 
 .navbar a:hover {
     color: #c6c6c6;
+    transform: scale(1.1);
 }
 
 .navbar .logo a {
@@ -142,23 +143,75 @@ header {
 }
 
 header h1 {
-    font-size: 5rem;
+    font-size: 5.5rem;
     font-weight: 500;
 }
 
 header h2 {
     color: #c6c6c6;
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 400;
-    padding-bottom: 3rem;
+    
+}
+
+/*header .icons {
+    padding-top: 1rem;
+
+}
+
+header .icons a {
+    scale: 1.5;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+header .icons a:hover {
+    color: #c6c6c6;
+    transform: scale(1.1);
+}*/
+
+header .down {
+    padding-top: 4rem;
+}
+
+header .down a {
+    
+    color: white;
+    cursor: pointer;
+    scale: 1.75;
+    transition: 0.1s ease-in;
+}
+
+header .down a:hover {
+    color: #c6c6c6;
+    transform: translateY(20%);
 }
 
 @media (max-width: 640px) {
     header h1 {
-        font-size: 12vw;
+        font-size: 14vw;
     }
     header h2 {
-        font-size: 5vw;
+        font-size: 6vw;
+    }
+    header .down a {
+        scale: 1.25;
+    }
+}
+
+@media (max-height: 640px) {
+    header h1 {
+        font-size: 15vh;
+    }
+    header h2 {
+        font-size: 8vh;
+    }
+    header .down a {
+        scale: 1.25;
+    }
+    header .down {
+        padding-top: 1rem;
     }
 }
 
