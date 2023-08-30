@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'EB Garamond', 'serif';
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #24252f;
+    color: white;
+    /*overflow: hidden;*/ /*Hides scroll bars, shouldn't need this, fix later*/
+}
+
+/* NAV BAR */
+
+nav {
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #24252f;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+}
+
+.logo:hover {
+    color: #c6c6c6;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    position: relative;
+}
+
+nav ul li .socials {
+    margin: 10px -5px;
+}
+
+
+nav ul li a.section-name::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+nav ul li a.section-name:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #c6c6c6
+}
+
+nav ul li button {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #ffffff;
+    padding: 7px 16px;
+    min-height: 36px;
+    width: 125px;
+    min-width: 36px;
+    color: #ffffff;
+    background: #24252f; 
+    border-radius:4px; 
+    font-weight: 400; 
+    font-size: 1.4rem; 
+}
+
+nav ul li button:hover {
+    /*background: #21202b; outline: 1px solid transparent;*/
+    color: #c6c6c6;
+}
+
+/* HEADER */
+
+header {
+    margin-top: 35vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header h1 {
+    font-size: 6rem;
+    font-weight: 500;
+}
+
+header h2 {
+    color: #c6c6c6;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+header h3 {
+    padding-top: 100px;
+}
+
+header h3 a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    scale: 1.25;
+    transition: 0.1s ease-in;
+}
+
+header h3 a:hover {
+    color: #c6c6c6;
+    transform: translateY(20%);
+}
+
+/* SECTIONS */
+
+section {
+    min-height: 100vh;    
+}
+
+.section-header {
+    font-size: 2.5rem;
+    /*text-align: center;*/
+    font-weight: 500;
+    padding-top: 200px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+}
+
+section p {
+    font-size: 1.25rem;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* EFFECTS */
+
+.blink {
+    animation: blink-animation 1.25s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1.25s steps(5, start) infinite;
+  }
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+}
+
+.btn-effect {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    /*color: $link-text-color;*/
+    /*text-transform: capitalize;*/
+    /* background-color: - add your own background-color */
+    /*font: {
+      family: 'Roboto', sans-serif;
+      size: 18px;
+    }*/
+    /*padding: 10px 0px;
+    width: 125px;*/
+    /*border-radius: $border-radius;*/
+    overflow: hidden;
+  }
+  
+  /* effect-1 styles */
+  
+.btn-effect.effect-1 {
+    transition: all 0.2s linear 0s;
+    
+    &:before {
+      content: "\f019";
+      font-family: FontAwesome;
+      font-size: 17px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      height: 100%;
+      width: 40px;
+      transition: all 0.2s linear 0s;
+    }
+    
+    &:hover {
+      text-indent: -20px;
+      
+      &:before {
+        opacity: 1;
+        text-indent: 0px;
+      }
+    }
+  }
+  
