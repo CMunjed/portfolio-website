@@ -15,12 +15,62 @@
       src="https://kit.fontawesome.com/d23d653484.js"
       crossorigin="anonymous"
     ></script>
+    <!--<script>
+      /*
+      //window.location.href =
+      //window.location.href.replace(/#(.*)$/, "") + "#" + "section_id";
+      window.onscroll = () => {
+        var current = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLi.forEach((li) => {
+          li.classList.remove("active");
+          if (li.classList.contains(current)) {
+            li.classList.add("active");
+          }
+        });
+      };
+
+
+      let sections = document.querySelectorAll("body section");
+      let navLinks = document.querySelectorAll("body nav ul li a");
+
+      window.onscroll = () => {
+        sections.forEach((sec) => {
+          console.log("section");
+          let top = window.scrollY;
+          let offset = sec.offsetTop;
+          let height = sec.offsetHeight;
+          let id = sec.getAttribute("id");
+          console.log(id);
+
+          if (top >= offset && top < offset + height) {
+            navLinks.forEach((links) => {
+              links.classList.remove("active");
+              document
+                .querySelector("nav ul li a [href*=]" + id + "]")
+                .classList.add("active");
+            });
+          }
+        });
+      };*/
+    </script>-->
   </head>
 
   <body>
     <nav class="sticky">
       <a class="logo" href="#">C.M.</a>
       <ul>
+        <li><a class="section-name" href="#about">About</a></li>
+        <li><a class="section-name" href="#projects">Projects</a></li>
+        <li><a class="section-name" href="#contact">Contact</a></li>
+        <li><button class="btn-effect effect-1">Resume</button></li>
         <li>
           <a
             href="https://github.com/CMunjed"
@@ -37,10 +87,6 @@
             style="padding-top: 0.25rem"
           ></a>
         </li>
-        <li><a class="section-name" href="#about">About</a></li>
-        <li><a class="section-name" href="#projects">Projects</a></li>
-        <li><a class="section-name" href="#contact">Contact</a></li>
-        <li><button class="btn-effect effect-1">Resume</button></li>
       </ul>
     </nav>
     <section id="home">
@@ -51,25 +97,34 @@
       </header>
     </section>
     <section id="about">
-      <h2 class="section-header">> About Me<span class="blink">_</span></h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut
-        tincidunt ipsum. Ut eu sem rhoncus, lacinia dolor in, pellentesque
-        ipsum. Duis pulvinar consequat nibh, id molestie eros pellentesque nec.
-        Phasellus enim ex, pellentesque et ipsum suscipit, maximus finibus
-        magna. Etiam fermentum ante massa, id pharetra felis laoreet sed. Proin
-        interdum felis vitae ligula eleifend sagittis. Cras pharetra, lorem et
-        ullamcorper volutpat, magna tortor maximus sapien, id laoreet velit dui
-        sagittis leo. Vestibulum non interdum purus. Aenean sit amet blandit
-        eros. Morbi laoreet purus in congue feugiat. Morbi diam dui, euismod ut
-        metus vitae, vulputate porttitor dolor. Vivamus leo nisi, suscipit et
-        tempor nec, dapibus nec diam. Donec porttitor nibh a suscipit finibus.
-        Sed feugiat odio ex. Vivamus luctus erat quis augue vestibulum, a
-        posuere risus dignissim. Vestibulum sit amet dolor purus. Donec a lorem
-        vehicula, dignissim nibh at, porta magna. Nulla tellus elit, tempor eget
-        maximus in, fringilla eget tortor. Pellentesque non elit lacus. Proin
-        tristique non erat eget tincidunt.
-      </p>
+      <div class="columns">
+        <div class="column">
+          <h2 class="section-header">> About Me<span class="blink">_</span></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque ut tincidunt ipsum. Ut eu sem rhoncus, lacinia dolor
+            in, pellentesque ipsum. Duis pulvinar consequat nibh, id molestie
+            eros pellentesque nec. Phasellus enim ex, pellentesque et ipsum
+            suscipit, maximus finibus magna. Etiam fermentum ante massa, id
+            pharetra felis laoreet sed. Proin interdum felis vitae ligula
+            eleifend sagittis. Cras pharetra, lorem et ullamcorper volutpat,
+            magna tortor maximus sapien, id laoreet velit dui sagittis leo.
+            Vestibulum non interdum purus. Aenean sit amet blandit eros. Morbi
+            laoreet purus in congue feugiat. Morbi diam dui, euismod ut metus
+            vitae, vulputate porttitor dolor. Vivamus leo nisi, suscipit et
+            tempor nec, dapibus nec diam. Donec porttitor nibh a suscipit
+            finibus. Sed feugiat odio ex. Vivamus luctus erat quis augue
+            vestibulum, a posuere risus dignissim. Vestibulum sit amet dolor
+            purus. Donec a lorem vehicula, dignissim nibh at, porta magna. Nulla
+            tellus elit, tempor eget maximus in, fringilla eget tortor.
+            Pellentesque non elit lacus. Proin tristique non erat eget
+            tincidunt.
+          </p>
+        </div>
+        <div class="column">
+          <img src="uf.avif" />
+        </div>
+      </div>
     </section>
     <section id="projects">
       <h2 class="section-header">> Projects<span class="blink">_</span></h2>
