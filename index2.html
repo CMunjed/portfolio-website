@@ -15,6 +15,15 @@
       src="https://kit.fontawesome.com/d23d653484.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      var scrollFunc = function (id) {
+        event.preventDefault();
+        document.getElementById(id).scrollIntoView(true);
+        //console.log("test");
+        //var reqId = "#" + id;
+        //window.scrollTo(0, $(reqId).offset().top - 85);
+      };
+    </script>
     <!--<script>
       /*
       //window.location.href =
@@ -65,11 +74,23 @@
 
   <body>
     <nav class="sticky">
-      <a class="logo" href="#">C.M.</a>
+      <a class="logo" href="#"> C.M. </a>
       <ul>
-        <li><a class="section-name" href="#about">About</a></li>
-        <li><a class="section-name" href="#projects">Projects</a></li>
-        <li><a class="section-name" href="#contact">Contact</a></li>
+        <li>
+          <a class="section-name" href="" onclick="scrollFunc('about')"
+            >About</a
+          >
+        </li>
+        <li>
+          <a class="section-name" href="" onclick="scrollFunc('projects')"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a class="section-name" href="" onclick="scrollFunc('contact')"
+            >Contact</a
+          >
+        </li>
         <li><button class="btn-effect effect-1">Resume</button></li>
         <li>
           <a
@@ -93,7 +114,14 @@
       <header>
         <h1>Connor Munjed</h1>
         <h2>> Software Developer<span class="blink">_</span></h2>
-        <h3><a href="#about" class="fa-solid fa-chevron-down fa-lg"></a></h3>
+        <!--<h3><a href="#about" class="fa-solid fa-chevron-down fa-lg"></a></h3>-->
+        <h3>
+          <a
+            href=""
+            class="fa-solid fa-chevron-down fa-lg"
+            onclick="scrollFunc('about')"
+          ></a>
+        </h3>
       </header>
     </section>
     <section id="about">
