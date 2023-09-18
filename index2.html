@@ -24,6 +24,25 @@
         //window.scrollTo(0, $(reqId).offset().top - 85);
       };
     </script>
+    <script>
+      var select = function (ele) {
+        event.preventDefault();
+        const navButtons = document.querySelectorAll('nav ul li a');
+        navButtons.forEach((element) => {
+          element.classList.remove("active");
+          element.classList.add("inactive");
+        });
+        ele.classList.add("active")
+      }
+      var unselect = function() {
+        event.preventDefault();
+        const navButtons = document.querySelectorAll('nav ul li a');
+        navButtons.forEach((element) => {
+          element.classList.remove("active");
+          element.classList.add("inactive");
+        });
+      }
+    </script>
     <!--<script>
       /*
       //window.location.href =
@@ -70,24 +89,25 @@
         });
       };*/
     </script>-->
+    
   </head>
-
+  
   <body>
     <nav class="sticky">
-      <a class="logo" href="#"> C.M. </a>
+      <a class="logo" onclick="document.body.scrollTop = document.documentElement.scrollTop = 0;unselect()"> C.M. </a>
       <ul>
         <li>
-          <a class="section-name" href="" onclick="scrollFunc('about')"
+          <a class="section-name inactive" href="" onclick="scrollFunc('about');select(this)"
             >About</a
           >
         </li>
         <li>
-          <a class="section-name" href="" onclick="scrollFunc('projects')"
+          <a class="section-name inactive" href="" onclick="scrollFunc('projects');select(this)"
             >Projects</a
           >
         </li>
         <li>
-          <a class="section-name" href="" onclick="scrollFunc('contact')"
+          <a class="section-name inactive" href="" onclick="scrollFunc('contact');select(this)"
             >Contact</a
           >
         </li>
@@ -144,15 +164,19 @@
               tempor nec, dapibus nec diam. Donec porttitor nibh a suscipit
               finibus. Sed feugiat odio ex. Vivamus luctus erat quis augue
               vestibulum, a posuere risus dignissim. Vestibulum sit amet dolor
-              purus. Donec a lorem vehicula, dignissim nibh at, porta magna.
-              Nulla tellus elit, tempor eget maximus in, fringilla eget tortor.
-              Pellentesque non elit lacus. Proin tristique non erat eget
-              tincidunt.
+              purus.
             </p>
           </div>
           <div class="column">
             <img src="uf.avif" />
           </div>
+        </div>
+        <div class="arrow">
+          <a
+            href=""
+            class="down-arrow fa-solid fa-chevron-down fa-lg"
+            onclick="scrollFunc('projects')"
+          ></a>
         </div>
       </div>
     </section>
@@ -178,6 +202,13 @@
           tortor. Pellentesque non elit lacus. Proin tristique non erat eget
           tincidunt.
         </p>
+        <div class="arrow">
+          <a
+            href=""
+            class="down-arrow fa-solid fa-chevron-down fa-lg"
+            onclick="scrollFunc('contact')"
+          ></a>
+        </div>
       </div>
     </section>
     <section id="contact">
