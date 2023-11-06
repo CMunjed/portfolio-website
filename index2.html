@@ -43,6 +43,31 @@
         });
       }
     </script>
+    <script>
+      //Script to automatically select top tabs depending on where on the page the user is.
+      //The number 30 is hardcoded, maybe consider a different approach.
+
+      //Fix the issue with pressing a button to scroll conflicting with this.
+      
+      window.addEventListener("scroll", function() {
+        var elementTarget = document.getElementById("home");
+        if (window.scrollY > (elementTarget.offsetTop - 30/*+ elementTarget.offsetHeight*/)) {
+          unselect();
+        }
+        elementTarget = document.getElementById("about");
+        if (window.scrollY > (elementTarget.offsetTop - 30/*+ elementTarget.offsetHeight*/)) {
+          select(document.getElementsByClassName('section-name inactive about')[0]);
+        }
+        elementTarget = document.getElementById("projects");
+        if (window.scrollY > (elementTarget.offsetTop - 30/*+ elementTarget.offsetHeight*/)) {
+          select(document.getElementsByClassName('section-name inactive projects')[0]);
+        }
+        elementTarget = document.getElementById("contact");
+        if (window.scrollY > (elementTarget.offsetTop - 30/*+ elementTarget.offsetHeight*/)) {
+          select(document.getElementsByClassName('section-name inactive contact')[0]);
+        }
+      });      
+    </script>
     <!--<script>
       /*
       //window.location.href =
@@ -97,17 +122,17 @@
       <a class="logo" onclick="document.body.scrollTop = document.documentElement.scrollTop = 0;unselect()"> C.M. </a>
       <ul>
         <li>
-          <a class="section-name inactive" href="" onclick="scrollFunc('about');select(this)"
+          <a class="section-name inactive about" href="" onclick="scrollFunc('about');select(this)"
             >About</a
           >
         </li>
         <li>
-          <a class="section-name inactive" href="" onclick="scrollFunc('projects');select(this)"
+          <a class="section-name inactive projects" href="" onclick="scrollFunc('projects');select(this)"
             >Projects</a
           >
         </li>
         <li>
-          <a class="section-name inactive" href="" onclick="scrollFunc('contact');select(this)"
+          <a class="section-name inactive contact" href="" onclick="scrollFunc('contact');select(this)"
             >Contact</a
           >
         </li>
@@ -133,13 +158,13 @@
     <section id="home">
       <header>
         <h1>Connor Munjed</h1>
-        <h2>> Software Developer<span class="blink">_</span></h2>
+        <h2>> Software Engineer<span class="blink">_</span></h2>
         <!--<h3><a href="#about" class="fa-solid fa-chevron-down fa-lg"></a></h3>-->
         <h3>
           <a
             href=""
             class="fa-solid fa-chevron-down fa-lg"
-            onclick="scrollFunc('about')"
+            onclick="scrollFunc('about');select(document.getElementsByClassName('section-name inactive about')[0])"
           ></a>
         </h3>
       </header>
@@ -175,7 +200,7 @@
           <a
             href=""
             class="down-arrow fa-solid fa-chevron-down fa-lg"
-            onclick="scrollFunc('projects')"
+            onclick="scrollFunc('projects');select(document.getElementsByClassName('section-name inactive projects')[0])"
           ></a>
         </div>
       </div>
@@ -206,7 +231,7 @@
           <a
             href=""
             class="down-arrow fa-solid fa-chevron-down fa-lg"
-            onclick="scrollFunc('contact')"
+            onclick="scrollFunc('contact');select(document.getElementsByClassName('section-name inactive contact')[0])"
           ></a>
         </div>
       </div>
